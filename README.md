@@ -57,14 +57,20 @@ ALB SG: Allow inbound from 0.0.0.0/0 (HTTP/HTTPS).
 EC2 SG: Allow inbound from ALB SG only.
 
 9. Test Connectivity
+Deploy a simple web app on the EC2 instances in private subnets.
+
+Install Apache or Nginx on the EC2 instance:
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+Create a simple index page:
+echo "<h1>Hello from Private EC2 via ALB</h1>" | sudo tee /var/www/html/index.html
+
 Access the ALB DNS name from your browser.
 Verify that traffic reaches EC2 instances in private subnets.
 
-10. Optional Enhancements
-Add Auto Scaling Group for EC2s.
-Enable HTTPS with ACM certificate.
-Add CloudWatch alarms for health monitoring.
-
+===========================================================================================================================
 
 Troubleshooting
 Health check failures: Ensure EC2 SG allows traffic from ALB SG.
