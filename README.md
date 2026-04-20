@@ -8,7 +8,7 @@ This repo demonstrates a common AWS architecture pattern:
 - EC2 instances in private subnets as target group members
 
 ## Architecture Diagram
-![Architecture Diagram](diagram.png)
+Please refer architecture diagram
 
 ## Setup Steps
 1. Create a VPC with public and private subnets.
