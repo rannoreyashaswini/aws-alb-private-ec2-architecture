@@ -70,6 +70,9 @@ Troubleshooting
 Health check failures: Ensure EC2 SG allows traffic from ALB SG.
 No internet access: Use NAT Gateway for outbound traffic from private EC2s.
 
+Cost Considerations  
+NAT Gateways, ALBs, and EC2 instances incur costs, so should clean up resources after testing.
+
 Takeaways
 ALB in public subnet handles external traffic.
 EC2s in private subnets remain secure and isolated.
